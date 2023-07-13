@@ -6,11 +6,10 @@ public class ConductorController : MonoBehaviour
 {
 
     public float jumpForce;
-    [SerializeField] private float speed = 1;
+    [SerializeField] private float speed = 2f;
 
     private Animator anim;
     private Rigidbody2D rb;
-    private Vector2 movementDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +21,11 @@ public class ConductorController : MonoBehaviour
     void Update()
     {
         // get move input
-        float moveInput = Input.GetAxisRaw("Horizontal");
-
-        if (moveInput == 0)
+        // float moveInput = Input.GetAxisRaw("Horizontal");
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
+/*
+        if (inputX == 0)
         {
             // conductor not moving, play idle animation
             anim.SetBool("isRunning", false);
@@ -33,14 +34,29 @@ public class ConductorController : MonoBehaviour
         {
             // conductor is moving, play run animation and move transform
             anim.SetBool("isRunning", true);
-        }
+        }*/
 
         // move player
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            gameObject.transform.position += Vector3.forward;
+            // anim.SetBool("isRunning", true);
+            Debug.Log("trying to run right");
+            transform.position += Vector3.right * speed * Time.deltaTime;
+            Debug.Log("position: " + transform.position);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("trying to run left");
+            Debug.Log("position: " + transform.position);
+            transform.position += Vector3.right * -speed * Time.deltaTime;
+        }
+        else
+        {
+            // player not running, go back to idle
+            anim.SetBool("isRunning", false);
         }
 
 
     }
+
 }
