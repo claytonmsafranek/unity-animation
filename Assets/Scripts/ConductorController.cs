@@ -20,12 +20,16 @@ public class ConductorController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("position: " + transform.position);
+
         // get move input
         // float moveInput = Input.GetAxisRaw("Horizontal");
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
-/*
-        if (inputX == 0)
+        Vector3 movement = new Vector3(inputX, inputY, 0);
+        transform.Translate(movement * speed * Time.deltaTime);
+
+        if (inputX == 0 && inputY == 0)
         {
             // conductor not moving, play idle animation
             anim.SetBool("isRunning", false);
@@ -34,15 +38,16 @@ public class ConductorController : MonoBehaviour
         {
             // conductor is moving, play run animation and move transform
             anim.SetBool("isRunning", true);
-        }*/
+        }
 
         // move player
-        if (Input.GetKey(KeyCode.D))
+
+        /*if (Input.GetKey(KeyCode.D))
         {
             // anim.SetBool("isRunning", true);
             Debug.Log("trying to run right");
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            Debug.Log("position: " + transform.position);
+            //transform.Translate(Vector3.right * speed * Time.deltaTime);
+            transform.position = new Vector3(10, 10, 0);
         }
         else if (Input.GetKey(KeyCode.A))
         {
@@ -54,7 +59,7 @@ public class ConductorController : MonoBehaviour
         {
             // player not running, go back to idle
             anim.SetBool("isRunning", false);
-        }
+        }*/
 
 
     }
