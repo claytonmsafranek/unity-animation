@@ -20,7 +20,11 @@ public class TrainController : MonoBehaviour
         // move train to spawn point 2 off screen
         if (transform.position != spawnPoint1.transform.position)
         {
+            // move position of train
             transform.position = Vector2.MoveTowards(transform.position, spawnPoint1.transform.position, trainSpeed);
+
+            // move rotation of train so it faces target (stays on tracks)
+            transform.up = spawnPoint1.transform.position - transform.position;
         }
         
     }
