@@ -328,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658417410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: -7.07, z: -0.047693364}
+  m_LocalPosition: {x: -8, y: -10.88, z: -0.047693364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -430,6 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880953443}
   - component: {fileID: 880953442}
+  - component: {fileID: 880953444}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -497,13 +498,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880953441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.49, y: -2.94, z: 0}
+  m_LocalPosition: {x: -7.49, y: -10.27, z: 0}
   m_LocalScale: {x: 1.8992188, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880953444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880953441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ae49173d9a0b74892d4a16b437ce0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint1: {fileID: 1186556033}
+  spawnPoint2: {fileID: 658417410}
+  trainSpeed: 0.01
 --- !u!1 &1120535886
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186556033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.19, y: 6.34, z: -0.047693364}
+  m_LocalPosition: {x: -6.9, y: 11.39, z: -0.047693364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

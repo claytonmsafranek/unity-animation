@@ -6,6 +6,7 @@ public class TrainController : MonoBehaviour
 {
     [SerializeField] GameObject spawnPoint1;
     [SerializeField] GameObject spawnPoint2;
+    [SerializeField] float trainSpeed = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class TrainController : MonoBehaviour
         // move train to spawn point 2 off screen
         if (transform.position != spawnPoint1.transform.position)
         {
-            transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, spawnPoint1.transform.position, trainSpeed);
         }
         
     }
