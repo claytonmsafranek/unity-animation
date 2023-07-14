@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TrainController : MonoBehaviour
 {
-    [SerializeField] GameObject spawnPoint1;
-    [SerializeField] GameObject spawnPoint2;
-    [SerializeField] float trainSpeed = 2f;
+    [SerializeField] public GameObject spawnPoint1;
+    [SerializeField] public GameObject spawnPoint2;
+    [SerializeField] float trainSpeed = 0.01f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,11 @@ public class TrainController : MonoBehaviour
 
             // move rotation of train so it faces target (stays on tracks)
             transform.up = spawnPoint1.transform.position - transform.position;
+        }
+        else
+        {
+            // train reached other point off screen, destroy itself
+            Destroy(gameObject);
         }
         
     }

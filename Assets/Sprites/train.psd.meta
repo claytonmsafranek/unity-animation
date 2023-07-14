@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -131,10 +131,10 @@ TextureImporter:
       name: train_0
       rect:
         serializedVersion: 2
-        x: 940
-        y: 1059
+        x: 63
+        y: 21
         width: 211
-        height: 354
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d32475a79630f740b0498f2942a4103
-      internalID: 175615240
+      spriteID: 9ebf4aec40c0b52489021ec3e7ac3727
+      internalID: 103026367
       vertices: []
       indices: 
       edges: []
@@ -159,7 +159,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      train_0: 175615240
+      train_0: 103026367
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1
