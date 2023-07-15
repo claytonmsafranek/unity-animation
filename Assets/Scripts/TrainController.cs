@@ -30,6 +30,7 @@ public class TrainController : MonoBehaviour
         {
             // train reached other point off screen, destroy itself
             Destroy(gameObject);
+
         }
         
     }
